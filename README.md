@@ -1,4 +1,4 @@
-## Wifi business management website (Progress Still 80% 😁)
+## Wifi business management website
 
 `Technology : TypeScript, React. Next.js 13, GraphQL, Tailwind`
 
