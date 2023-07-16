@@ -5,7 +5,6 @@ export const navItems = [
 ];
 
 export const sideItems = [
-  { name: "Dashboard", link: "/dashboard" },
   { name: "Wifi Pilihan", link: "/wifi" },
   { name: "Paketan-Paket", link: "/paket" },
   { name: "Member", link: "/member" },

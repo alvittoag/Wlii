@@ -1,5 +1,7 @@
 const Loading = () => {
-  return <div className="text-4xl">Loading...</div>;
+  return (
+    <div className="flex justify-center items-center h-full">Loading...</div>
+  );
 };
 
 export default Loading;

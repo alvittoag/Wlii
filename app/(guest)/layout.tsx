@@ -8,7 +8,7 @@ import PrivateRoute from "@/route/PrivateRoute";
 
 const GuestLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <PrivateRoute page="auth" redirect="/dashboard">
+    <PrivateRoute page="auth" redirect="/wifi">
       <div className="flex flex-col justify-between gap-[110px] h-[100vh]">
         <Navbar />
 

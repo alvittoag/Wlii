@@ -1,5 +1,8 @@
 "use client";
 
+// ** Import React
+import { ChangeEvent, useState } from "react";
+
 // ** Import Material
 import { Button, Typography } from "@material-tailwind/react";
 
@@ -37,47 +40,43 @@ const RowMember = ({ data }: { data: IMember }) => {
   };
 
   return (
-    <>
-      <tr className="even:bg-blue-gray-50/50 hover:bg-gray-200 hover:text-white">
-        <td className="p-4 py-7">
-          <Typography variant="small" color="blue-gray" className="text-[15px]">
-            {data.name_user}
-          </Typography>
-        </td>
+    <tr className="even:bg-blue-gray-50/50 hover:bg-gray-200 hover:text-white">
+      <td className="p-4 py-7">
+        <Typography variant="small" color="blue-gray" className="text-[15px]">
+          {data.name_user}
+        </Typography>
+      </td>
 
-        <td className="p-4">
-          <Typography variant="small" color="blue-gray" className="text-[15px]">
-            {data.package.name}
-          </Typography>
-        </td>
+      <td className="p-4">
+        <Typography variant="small" color="blue-gray" className="text-[15px]">
+          {data.package.name}
+        </Typography>
+      </td>
 
-        <td className="p-4">
-          <Typography variant="small" color="blue-gray" className="text-[15px]">
-            {validateExpired ? "Sudah Habis" : expired}
-          </Typography>
-        </td>
+      <td className="p-4">
+        <Typography variant="small" color="blue-gray" className="text-[15px]">
+          {validateExpired ? "Sudah Habis" : expired}
+        </Typography>
+      </td>
 
-        <td className="p-4">
-          <Typography variant="small" color="blue-gray" className="text-[15px]">
-            {data.code}
-          </Typography>
-        </td>
+      <td className="p-4">
+        <Typography variant="small" color="blue-gray" className="text-[15px]">
+          {data.code}
+        </Typography>
+      </td>
 
-        <td className="space-x-3 flex justify-center items-center py-5">
-          <Button size="sm">Edit</Button>
-
-          <Button
-            onClick={handleDelete}
-            disabled={loading}
-            variant="outlined"
-            size="sm"
-            color="red"
-          >
-            Hapus
-          </Button>
-        </td>
-      </tr>
-    </>
+      <td className="space-x-3 flex justify-center items-center py-5">
+        <Button
+          onClick={handleDelete}
+          disabled={loading}
+          variant="outlined"
+          size="sm"
+          color="red"
+        >
+          Hapus
+        </Button>
+      </td>
+    </tr>
   );
 };
 

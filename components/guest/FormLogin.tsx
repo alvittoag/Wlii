@@ -69,7 +69,7 @@ const FormLogin = () => {
           title: "Berhasil Masuk",
           text: "Anda Berhasil Masuk",
           icon: "success",
-        }).then(() => router.push("/dashboard"));
+        }).then(() => router.push("/wifi"));
       }
     });
   };
