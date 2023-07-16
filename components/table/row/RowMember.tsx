@@ -13,6 +13,13 @@ import moment from "moment";
 const RowMember = ({ data }: { data: IMember }) => {
   const router = useRouter();
 
+  // ** Validation
+  const expired = moment(data.expired).fromNow(true);
+
+  const validateExpired = moment(data.expired).isBefore(
+    new Date().toLocaleDateString()
+  );
+
   // ** Mutation
   const [deleteMember, { loading }] = useMutation(DeleteMember);
 
@@ -28,8 +35,6 @@ const RowMember = ({ data }: { data: IMember }) => {
       router.refresh();
     });
   };
-
-  const expired = moment(data.expired).fromNow(true);
 
   return (
     <>
@@ -48,7 +53,7 @@ const RowMember = ({ data }: { data: IMember }) => {
 
         <td className="p-4">
           <Typography variant="small" color="blue-gray" className="text-[15px]">
-            {expired}
+            {validateExpired ? "Sudah Habis" : expired}
           </Typography>
         </td>
 
